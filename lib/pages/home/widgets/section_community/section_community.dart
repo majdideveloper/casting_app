@@ -13,6 +13,9 @@ class SectionCommunity extends StatelessWidget {
       padding: EdgeInsets.all(10.0),
       child: Center(
         child: Column(children: [
+          Center(
+            child: Text('Communiy'),
+          ),
           Wrap(
             spacing: 10,
             runSpacing: 10,
