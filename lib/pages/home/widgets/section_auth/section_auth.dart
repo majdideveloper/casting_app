@@ -1,4 +1,5 @@
 import 'package:casting_app_web/core/theme/theme.dart';
+import 'package:casting_app_web/core/widgets/cart_image.dart';
 import 'package:casting_app_web/core/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -37,18 +38,11 @@ class WidgetAuth extends StatelessWidget {
         return Stack(
           alignment: AlignmentDirectional.center,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(
-                  image: NetworkImage(
-                      'https://images.pexels.com/photos/21972309/pexels-photo-21972309/free-photo-of-homme-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              width: containerWidth,
-              height: containerWidth,
-            ),
+            CartImage(
+                image:
+                    'https://images.pexels.com/photos/21972309/pexels-photo-21972309/free-photo-of-homme-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                containerWidth: containerWidth,
+                containerHeight: containerWidth),
             Column(
               children: [
                 Text(

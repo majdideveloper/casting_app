@@ -1,4 +1,5 @@
 import 'package:casting_app_web/core/widgets/widgets.dart';
+import 'package:casting_app_web/pages/home/widgets/section_morethan_models/section_morethan_model.dart';
 import 'package:casting_app_web/pages/pages.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SectionAuthWidgets(),
+            SectionMoreThanModel()
           ],
         ),
       ),
