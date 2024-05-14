@@ -28,8 +28,8 @@ class SectionDiscovred extends StatelessWidget {
                   alignment: Alignment.bottomRight,
 child: Image.network(
                   'https://static.vecteezy.com/system/resources/previews/022/484/378/non_2x/cute-and-cheerful-3d-girl-model-transparent-background-free-png.png', // Your image URL
-                  width: 150.0,
-                  height: 150.0,
+                  width: 300.0,
+                  height: 300.0,
                  
                 ),
                 ),
