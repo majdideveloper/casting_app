@@ -3,3 +3,5 @@ export 'custom_appbar/custom_appbar.dart';
 export './custom_appbar/widgets/mobile_appbar.dart';
 export './custom_appbar/widgets/wide_screen_appbar.dart';
 export './title_subtitle_widget.dart';
+export './widget_section.dart';
+export './custom_carousel.dart';
