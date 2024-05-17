@@ -26,7 +26,7 @@ final List<String> textList1 = [
       right: 0, // Adjust the position as needed
       child: Container(
         width: double.infinity,
-        color: roseColor,
+        color: blackColorText,
         child: 
         Column(
           

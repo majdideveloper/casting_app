@@ -10,35 +10,28 @@ class SectionSafety extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Center(
-        child: Column(
-            children: [
-          const Center(
-            child: Text('Your safety comes first'),
-          ),
-          Wrap(
-            spacing: 10,
-            runSpacing: 10,
-            children: [
-              SafetyWidget(
-                text: 'All professional members are verified by our team',
-                icon: Icons.security,
-              ),
-              SafetyWidget(
-                text: 'All professional members are verified by our team',
-                icon: Icons.security,
-              ),
-              SafetyWidget(
-                text: 'All professional members are verified by our team',
-                icon: Icons.security,
-              ),
-            ],
-          ),
-        ].withSpaceBetween(
-          height: 20,
-        )),
-      ),
+      padding: const EdgeInsets.all(25),
+      child: 
+        
+        Wrap(
+          spacing: 25,
+          runSpacing: 25,
+          children: [
+            SafetyWidget(
+              text: 'All professional members are verified by our team',
+              icon: Icons.security,
+            ),
+            SafetyWidget(
+              text: 'All professional members are verified by our team',
+              icon: Icons.security,
+            ),
+            SafetyWidget(
+              text: 'All professional members are verified by our team',
+              icon: Icons.security,
+            ),
+          ],
+        ),
+     
     );
   }
 }
@@ -66,26 +59,31 @@ class SafetyWidget extends StatelessWidget {
                   radius: 20,
                   backgroundColor: blackColor,
                   child: Icon(
-                    icon,
+                    icon, color: whiteColor,
                     size: 24,
                   ),
                 ),
-                Text(text),
+                Container(
+                  width: constraints.maxWidth / 1.3,
+                  child: FittedBox(child: Text(text, style: textStyleText,))),
               ].withSpaceBetween(width: 10),
             )
           : SizedBox(
               width: 250,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
                     radius: 50,
                     backgroundColor: blackColor,
                     child: Icon(
-                      icon,
+                      icon, color: whiteColor,
                       size: 34,
                     ),
                   ),
-                  Text(text),
+                  Text( text, 
+                  textAlign: TextAlign.center,
+                  style: textStyleText,),
                 ].withSpaceBetween(height: 10),
               ),
             );

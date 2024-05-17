@@ -75,30 +75,33 @@ class WidgetAuth extends StatelessWidget {
                 image:image,
                 containerWidth: containerWidth,
                 containerHeight: containerHeight),
-            Column(
-              children: [
-                FittedBox(
-                  fit: BoxFit.fill,
-                  child: Text(
-                    title,
-                    style:textStyleTitle.copyWith(color: whiteColor),
+            Container(
+              width: containerWidth / 1.2,
+              child: Column(
+                children: [
+                  FittedBox(
+                    fit: BoxFit.fill,
+                    child: Text(
+                      title,
+                      style:textStyleTitle.copyWith(color: whiteColor),
+                    ),
                   ),
-                ),
-                FittedBox(
-                  child: Text(
-                    text,
-                    style:textStyleText.copyWith(color: whiteColor),
+                  FittedBox(
+                    child: Text(
+                      text,
+                      style:textStyleText.copyWith(color: whiteColor),
+                    ),
                   ),
-                ),
-                CommonButton(
-                  text: textButton,
-                  background: roseColor,
-                  colorText: whiteColor,
-                  onPressed: onPressed,
-                ),
-              ],
+                  CommonButton(
+                    text: textButton,
+                    background: roseColor,
+                    colorText: whiteColor,
+                    onPressed: onPressed,
+                  ),
+                ].withSpaceBetween(height: 20),
+              ),
             )
-          ].withSpaceBetween(),
+          ]
         );
       },
     );

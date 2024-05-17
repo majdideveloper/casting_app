@@ -54,8 +54,8 @@ class CommunityWidget extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         double containerWidth = constraints.maxWidth < 780
-            ? constraints.maxWidth / 1.1
-            : constraints.maxWidth / 3.1;
+            ? constraints.maxWidth / 1.2
+            : constraints.maxWidth / 3.4;
         return Container(
           width: containerWidth,
           height: 150,
@@ -66,8 +66,8 @@ class CommunityWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FittedBox(child: Text(numberCoummnity)),
-              FittedBox(child: Text(textCoummnity)),
+              FittedBox(child: Text(numberCoummnity, style: textStyleTitle,)),
+              FittedBox(child: Text(textCoummnity , style: textStyleText,)),
             ],
           ),
         );
