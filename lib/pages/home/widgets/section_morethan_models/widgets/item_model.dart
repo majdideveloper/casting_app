@@ -11,13 +11,14 @@ class ItemModelWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // cart image
         CartImage(
             image:
                 'https://images.pexels.com/photos/21972309/pexels-photo-21972309/free-photo-of-homme-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            containerWidth: 100,
-            containerHeight: 100),
+            containerWidth: 200,
+            containerHeight:200),
 
             TitleSubtitleWidget(title: 'Title',text: 'text text ',),
 

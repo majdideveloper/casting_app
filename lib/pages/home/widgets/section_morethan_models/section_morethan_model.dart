@@ -32,10 +32,12 @@ ItemModelWidgets(),
       Container(
         padding: EdgeInsets.all(10),
         alignment: Alignment.center,
-        width: constraints.maxWidth/1.5,
-        height: 300,
+        width: constraints.maxWidth/1.1,
+          height: constraints.maxWidth > 750 
+          ? constraints.maxWidth/4
+          : constraints.maxWidth/1.1,
         child: ListView.separated(
-       separatorBuilder: (context, index) => SizedBox(width: 10),
+       separatorBuilder: (context, index) => SizedBox(width: 25),
           scrollDirection:  constraints.maxWidth > 780 ? Axis.horizontal : Axis.vertical,
         itemCount: itemModels.length,
         itemBuilder: (context, index) {
@@ -49,7 +51,7 @@ ItemModelWidgets(),
         CommonButton(
           onPressed: (){},
             text: 'sign up now', background: roseColor, colorText: whiteColor),
-      ].withSpaceBetween(),
+      ]
     );
       }
       );

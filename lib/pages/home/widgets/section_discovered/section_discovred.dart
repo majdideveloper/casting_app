@@ -16,7 +16,7 @@ class SectionDiscovred extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,                     
                 children: [
-                  TitleSubtitleWidget(title: 'Get Discovred', text: ''),
+                  Text('Get Discovred', style: textStyleTitle.copyWith(color: whiteColor),),
                   CommonButton(
                     onPressed: (){},
                     text: 'Sign in ', background: roseColor, colorText: whiteColor)

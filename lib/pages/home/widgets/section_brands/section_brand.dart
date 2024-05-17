@@ -4,42 +4,33 @@ import "package:flutter/material.dart";
 
 
 class BrandCarousel extends StatelessWidget {
-  CarouselController buttonCarouselController = CarouselController();
 
   @override
   Widget build(BuildContext context) {
    // final sizeH = MediaQuery.of(context).size.height;
     final sizeW = MediaQuery.of(context).size.width;
    
-    return CarouselSlider(
-      items: [
-        Wrap(
+    return 
+        Padding(
+          padding: const EdgeInsets.all(25),
+          child: Wrap(
+            
+            alignment: WrapAlignment.center,
+            runSpacing: 25,
+            spacing: 25,
+            children: [
           
-          alignment: WrapAlignment.center,
-          runSpacing: 25,
-          spacing: 25,
-          children: [
-        
-         BrandItems(),
-          BrandItems(),
            BrandItems(),
             BrandItems(),
              BrandItems(),
-        
-        
-          ],
-        )
-     
-
-      ],
-      options: CarouselOptions(
-      height: sizeW / 3,
-      aspectRatio: 1,
-      viewportFraction:1,
-      initialPage: 0,
-      //  scrollDirection: Axis.horizontal,
-      ),
-    );
+              BrandItems(),
+               BrandItems(),
+          
+          
+            ],
+                 
+              ),
+        );
   }
 }
 

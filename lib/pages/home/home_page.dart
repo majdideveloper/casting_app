@@ -1,6 +1,7 @@
 import 'package:casting_app_web/core/widgets/widgets.dart';
 import 'package:casting_app_web/pages/home/widgets/footer/footer.dart';
 import 'package:casting_app_web/pages/home/widgets/section_brands/section_brand.dart';
+import 'package:casting_app_web/pages/home/widgets/section_community/community_carousel.dart';
 import 'package:casting_app_web/pages/home/widgets/section_discovered/section_discovred.dart';
 import 'package:casting_app_web/pages/home/widgets/section_morethan_models/section_morethan_model.dart';
 import 'package:casting_app_web/pages/pages.dart';
@@ -27,8 +28,17 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             SectionAuthWidgets(),
             SectionMoreThanModel(),
-            SectionCommunity(),
-            SectionSafety(),
+            //SectionCommunity(),
+            WidgetSection(
+              titleSection: "Community",
+              contentSection: CommunityCarousel(),
+            ),
+            WidgetSection(
+              titleSection: "Your safety comes first",
+              contentSection: SectionSafety(),
+            
+            ),
+            
             WidgetSection(
               titleSection: "Success Stories",
               contentSection: OwnCarousel(),
