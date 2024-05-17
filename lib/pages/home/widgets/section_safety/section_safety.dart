@@ -63,7 +63,9 @@ class SafetyWidget extends StatelessWidget {
                     size: 24,
                   ),
                 ),
-                FittedBox(child: Text(text, style: textStyleText,)),
+                Container(
+                  width: constraints.maxWidth / 1.3,
+                  child: FittedBox(child: Text(text, style: textStyleText,))),
               ].withSpaceBetween(width: 10),
             )
           : SizedBox(

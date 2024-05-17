@@ -79,7 +79,8 @@ class OwnCarousel extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ResponsiveText(
-                      text: 'dsahgfhsfghadgsfafghasgfjahsgdfadgsfhas',
+                      text:
+                          'fghasgfjahsgdfa dsahgfhsfghadgsfa fghasgfjahsgdfa dsahgfhsfghadgsfa fghasgfjahsgdfa JYKIUYdgsfhas JYKIUYdgsfhas',
                     ),
                   ],
                 ),
@@ -112,13 +113,50 @@ class ResponsiveText extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double scaleFactor =
         screenWidth / 400; // Adjust 400 to a reference screen width
+ bool ismobile = screenWidth < 780;
 
-    return SizedBox(
-      width: screenWidth / 2,
-      child: Text(
-        text,
-        style: TextStyle(fontSize: 20 * scaleFactor),
-        softWrap: true,
+
+    return Padding(
+      padding: const EdgeInsets.only(left: 30),
+      child: FittedBox(
+        fit: BoxFit.cover,
+        child: Container(
+          width:
+          ismobile ?
+        screenWidth /2.2
+          : screenWidth / 2,
+          height: screenHeight / 1.3,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(
+                Icons.format_quote,
+                color: roseColor,
+                size: 40,
+              ),
+              Expanded(
+                child: Stack(
+                  children: [
+                    Text(
+                      textAlign: TextAlign.justify,
+                      text,
+                      style: TextStyle(fontSize: 20 * scaleFactor),
+                      softWrap: true,
+                    ),
+                    Positioned(
+                      child: Icon(
+                        Icons.format_quote,
+                        color: roseColor,
+                      ),
+                      right: 100,
+                      bottom: 0,
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

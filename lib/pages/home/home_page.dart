@@ -1,3 +1,4 @@
+import 'package:casting_app_web/core/extensions/extension.dart';
 import 'package:casting_app_web/core/widgets/widgets.dart';
 import 'package:casting_app_web/pages/home/widgets/footer/footer.dart';
 import 'package:casting_app_web/pages/home/widgets/section_brands/section_brand.dart';
@@ -27,7 +28,11 @@ class _MyHomePageState extends State<MyHomePage> {
           
           children: <Widget>[
             SectionAuthWidgets(),
-            SectionMoreThanModel(),
+             WidgetSection(
+              titleSection: "Brands that trust us",
+              contentSection: BrandCarousel(),
+            ),
+            //SectionMoreThanModel(),
             //SectionCommunity(),
             WidgetSection(
               titleSection: "Community",
@@ -36,17 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
             WidgetSection(
               titleSection: "Your safety comes first",
               contentSection: SectionSafety(),
-            
             ),
-            
             WidgetSection(
               titleSection: "Success Stories",
               contentSection: OwnCarousel(),
-            ),
-            
-            WidgetSection(
-              titleSection: "Brands that trust us",
-              contentSection: BrandCarousel(),
             ),
             SectionDiscovred(),
             Footer(),

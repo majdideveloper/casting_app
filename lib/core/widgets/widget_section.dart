@@ -14,21 +14,27 @@ class WidgetSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Center(
-          child: Column(
-            children: [
-              Text(
-                titleSection,
-                style: textStyleTitle,
-              ),
-              if (descriptionSection != null) Text(descriptionSection!),
-            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: Column(
+        children: [
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              
+              children: [
+                Text(
+                  textAlign:TextAlign.center,
+                  titleSection,
+                  style: textStyleTitle,
+                ),
+                if (descriptionSection != null) Text(descriptionSection!),
+              ],
+            ),
           ),
-        ),
-        if (contentSection != null) contentSection!
-      ],
+          if (contentSection != null) contentSection!
+        ],
+      ),
     );
   }
 }
