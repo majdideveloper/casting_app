@@ -1,7 +1,10 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:casting_app_web/core/extensions/extension.dart';
+import 'package:flutter/material.dart';
+
 import 'package:casting_app_web/core/theme/theme.dart';
 import 'package:casting_app_web/core/widgets/cart_image.dart';
 import 'package:casting_app_web/core/widgets/widgets.dart';
-import 'package:flutter/material.dart';
 
 class SectionAuthWidgets extends StatelessWidget {
   @override
@@ -12,11 +15,25 @@ class SectionAuthWidgets extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Center(
         child: Wrap(
-          spacing: 10,
-          runSpacing: 10,
+          spacing: 30,
+          runSpacing: 30,
           children: [
-            WidgetAuth(),
-            WidgetAuth(),
+            WidgetAuth(
+              image:  'https://t4.ftcdn.net/jpg/06/95/44/57/360_F_695445783_5u7W6J4Ev2UqaTe9tD3qEgsUekIdWq6t.jpg', 
+              title: 'Find work as a model', 
+              text: 'Modeling jobs for newcomers', 
+              textButton: 'For models and talents', 
+              onPressed: (){},
+              
+              ),
+            WidgetAuth(
+              image:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZK7VV7nV05KYAhTP4_WPIdxuUe9Ucg5tlK71kzaNQA&s', 
+              title: 'Find models and talents', 
+              text: 'Modeling jobs for newcomers', 
+              textButton: 'For professionals', 
+              onPressed: (){},
+              
+              ),
           ],
         ),
       ),
@@ -25,43 +42,63 @@ class SectionAuthWidgets extends StatelessWidget {
 }
 
 class WidgetAuth extends StatelessWidget {
+  final String image;
+  final String title;
+  final String text;
+  final String textButton;
+  final  void Function()? onPressed;
+
+  const WidgetAuth({
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.text,
+    required this.textButton,
+    required this.onPressed,
+  }) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         double containerWidth = constraints.maxWidth < 780
-            ? constraints.maxWidth / 1.1
-            : constraints.maxWidth / 2.1; // Adjust as needed
-        // double containerHeight =
-        //     constraints.maxWidth / 1.4; // Set the desired height
+            ? constraints.maxWidth / 1.2
+            : constraints.maxWidth / 2.2; // Adjust as needed
+          double containerHeight = constraints.maxWidth < 780 
+              ? constraints.maxWidth 
+              :constraints.maxWidth /2.5 ; // Set the desired height
 
         return Stack(
           alignment: AlignmentDirectional.center,
           children: [
             CartImage(
-                image:
-                    'https://images.pexels.com/photos/21972309/pexels-photo-21972309/free-photo-of-homme-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                image:image,
                 containerWidth: containerWidth,
-                containerHeight: containerWidth),
+                containerHeight: containerHeight),
             Column(
               children: [
-                Text(
-                  'First text',
-                  style: TextStyle(color: whiteColor),
+                FittedBox(
+                  fit: BoxFit.fill,
+                  child: Text(
+                    title,
+                    style:textStyleTitle.copyWith(color: whiteColor),
+                  ),
                 ),
-                Text(
-                  'First text',
-                  style: TextStyle(color: whiteColor),
+                FittedBox(
+                  child: Text(
+                    text,
+                    style:textStyleText.copyWith(color: whiteColor),
+                  ),
                 ),
                 CommonButton(
-                  text: "pour mannequins et talents",
+                  text: textButton,
                   background: roseColor,
                   colorText: whiteColor,
-                  onPressed: () {},
+                  onPressed: onPressed,
                 ),
               ],
             )
-          ],
+          ].withSpaceBetween(),
         );
       },
     );

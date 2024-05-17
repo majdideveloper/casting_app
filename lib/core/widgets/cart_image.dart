@@ -17,7 +17,7 @@ class CartImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(30),
                 image: DecorationImage(
                   image: NetworkImage(
                      image ?? 'https://images.pexels.com/photos/21972309/pexels-photo-21972309/free-photo-of-homme-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
@@ -25,7 +25,7 @@ class CartImage extends StatelessWidget {
                 ),
               ),
               width: containerWidth,
-              height: containerWidth,
+              height: containerHeight,
             );
   }
 }
