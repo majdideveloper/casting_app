@@ -1,4 +1,5 @@
 import 'package:casting_app_web/core/extensions/extension.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:casting_app_web/core/theme/theme.dart';
 import 'package:casting_app_web/core/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -26,19 +27,19 @@ class MobileAppBar extends StatelessWidget {
           children: [
             Container(
               height: 100,
-              width: MediaQuery.of(context).size.width / 3,
+              width: MediaQuery.of(context).size.width / 4.5,
               color: blackColor,
             ),
             Row(
               children: [
                 CommonButton(
-                  text: 'Log in',
+                  text: AppLocalizations.of(context).logIn,
                   background: greyColor,
                   colorText: blackColor,
                   onPressed: () {},
                 ),
                 CommonButton(
-                  text: 'Sign in',
+                  text: AppLocalizations.of(context).signUp,
                   background: roseColor,
                   colorText: whiteColor,
                   onPressed: () {},
@@ -47,7 +48,7 @@ class MobileAppBar extends StatelessWidget {
                   icon: const Icon(Icons.menu),
                   onPressed: () {},
                 ),
-              ].withSpaceBetween(width: 10),
+              ].withSpaceBetween(width: 2),
             ),
           ],
         ),
