@@ -2,6 +2,7 @@ import 'package:casting_app_web/core/extensions/extension.dart';
 import 'package:casting_app_web/core/theme/theme.dart';
 import 'package:casting_app_web/core/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WideScreenAppBar extends StatefulWidget {
   final String title;
@@ -18,7 +19,7 @@ class WideScreenAppBar extends StatefulWidget {
 }
 
 class _WideScreenAppBarState extends State<WideScreenAppBar> {
-  List<String> words = ['Apple', 'Banana', 'Orange', 'Grape', 'Watermelon'];
+  // List<String> words = ['Apple', 'Banana', 'Orange', 'Grape', 'Watermelon'];
   int selectedWordIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -36,47 +37,47 @@ class _WideScreenAppBarState extends State<WideScreenAppBar> {
               width: 200,
               color: blackColor,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: List.generate(words.length, (index) {
-                return GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedWordIndex = index;
-                    });
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.all(8.0),
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
-                      color: selectedWordIndex == index
-                          ? Colors.black
-                          : Colors.transparent,
-                    ),
-                    child: Text(
-                      words[index],
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: selectedWordIndex == index
-                            ? Colors.white
-                            : Colors.black,
-                      ),
-                    ),
-                  ),
-                );
-              }).withSpaceBetween(width: 10),
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: List.generate(words.length, (index) {
+            //     return GestureDetector(
+            //       onTap: () {
+            //         setState(() {
+            //           selectedWordIndex = index;
+            //         });
+            //       },
+            //       child: Container(
+            //         padding: const EdgeInsets.all(8.0),
+            //         decoration: BoxDecoration(
+            //           borderRadius: const BorderRadius.all(Radius.circular(20)),
+            //           color: selectedWordIndex == index
+            //               ? Colors.black
+            //               : Colors.transparent,
+            //         ),
+            //         child: Text(
+            //           words[index],
+            //           style: TextStyle(
+            //             fontSize: 14,
+            //             fontWeight: FontWeight.w700,
+            //             color: selectedWordIndex == index
+            //                 ? Colors.white
+            //                 : Colors.black,
+            //           ),
+            //         ),
+            //       ),
+            //     );
+            //   }).withSpaceBetween(width: 10),
+            // ),
             Row(
               children: [
                 CommonButton(
-                  text: 'Log in',
+                  text: AppLocalizations.of(context).logIn,
                   background: greyColor,
                   colorText: blackColor,
                   onPressed: () {},
                 ),
                 CommonButton(
-                  text: 'Sign in',
+                  text: AppLocalizations.of(context).signUp,
                   background: roseColor,
                   colorText: whiteColor,
                   onPressed: () {},

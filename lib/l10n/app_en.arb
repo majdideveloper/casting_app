@@ -1,0 +1,26 @@
+{
+    "language":"English",
+    "@language":{
+        "description": "The current Language"
+    },
+    "logIn": "Log In",
+    "@logIn": {
+        "description": "Text for the log in button"
+    },
+    "signUp": "Sign Up",
+    "@signUp": {
+        "description": "Text for the sign up button"
+    },
+    "signOut": "Sign Out",
+    "@signOut": {
+        "description": "Text for the sign out button"
+    },
+    "find_work_as_a_model": "Find work as a model",
+    "@signOut": {
+        "description": "Text for the Find work as a model button"
+    },
+    "find_models_and_talents": "Find models and talents",
+    "@signOut": {
+        "description": "Text for the Find models and talents button"
+    }
+}
