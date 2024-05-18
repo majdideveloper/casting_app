@@ -22,5 +22,9 @@
     "find_models_and_talents": "Find models and talents",
     "@signOut": {
         "description": "Text for the Find models and talents button"
+    },
+    "modeling_jobs_for_newcomers": "Modeling jobs for newcomers",
+    "@signOut": {
+        "description": "Text for the Subtitle Modeling jobs for newcomers "
     }
 }

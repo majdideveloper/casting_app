@@ -23,7 +23,7 @@ class SectionAuthWidgets extends StatelessWidget {
                   'https://t4.ftcdn.net/jpg/06/95/44/57/360_F_695445783_5u7W6J4Ev2UqaTe9tD3qEgsUekIdWq6t.jpg',
               title: AppLocalizations.of(context)
                   .find_work_as_a_model, // 'Find work as a model',
-              text: 'Modeling jobs for newcomers',
+              text: AppLocalizations.of(context).modeling_jobs_for_newcomers,
               textButton: 'For models and talents',
               onPressed: () {},
             ),
