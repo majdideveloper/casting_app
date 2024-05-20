@@ -7,6 +7,7 @@ import 'package:casting_app_web/pages/home/widgets/section_discovered/section_di
 import 'package:casting_app_web/pages/home/widgets/section_morethan_models/section_morethan_model.dart';
 import 'package:casting_app_web/pages/pages.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -24,26 +25,29 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: CustomAppBar(title: "title", backgroundColor: Colors.white),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          
+          mainAxisAlignment: MainAxisAlignment.center, 
           children: <Widget>[
             SectionAuthWidgets(),
              WidgetSection(
-              titleSection: "Brands that trust us",
+              titleSection:
+              AppLocalizations.of(context).title_section_brand,
+            //  "Brands that trust us",
               contentSection: BrandCarousel(),
             ),
             //SectionMoreThanModel(),
             //SectionCommunity(),
             WidgetSection(
-              titleSection: "Community",
+              titleSection: 
+              AppLocalizations.of(context).title_section_community,
+             // "Community",
               contentSection: CommunityCarousel(),
             ),
             WidgetSection(
-              titleSection: "Your safety comes first",
+              titleSection: AppLocalizations.of(context).title_section_safety,
               contentSection: SectionSafety(),
             ),
             WidgetSection(
-              titleSection: "Success Stories",
+              titleSection: AppLocalizations.of(context).title_section_success,
               contentSection: OwnCarousel(),
             ),
             SectionDiscovred(),

@@ -4,5 +4,19 @@
     "signOut": "Se déconnecter",
     "find_work_as_a_model": "Trouver du travail en tant que modèle",
     "find_models_and_talents": "Trouver des mannequins et talents",
-    "modeling_jobs_for_newcomers": "Emplois de mannequins pour débutants et mannequins professionnels."
+    "modeling_jobs_for_newcomers": "Emplois de mannequins pour débutants et mannequins professionnels.",
+    "subtitile_auth_professional": "Sourcer des mannequins, des talents et influenceurs pour tous types de projets.",
+    "for_model_and_talents": "Pour mannequins et talents",
+    "for_professional": "Pour les professionnels",
+    "title_section_brand": "Des marques qui nous font confiance",
+    "title_section_community" :"Communauté",
+    "title_section_safety" :"Votre sécurité passe avant tout",
+    "title_section_sucess" :"Sucess Stories",
+    "title_section_discovered" :"Faites-vous découvrir",
+    "community_text1": "Modèles dans la communauté",
+    "community_text2": "Professionnels de l'industrie",
+    "community_text3": "Agences",
+    "safety_text1": "Tous les membres professionnels sont vérifiés par notre équipe",
+    "safety_text2": "Des outils avancés pour stopper les escrocs dans leur élan",
+    "safety_text3": "Les avis de la communauté pour une plus grande tranquillité d'esprit"
 }
