@@ -72,7 +72,7 @@ class OwnCarousel extends StatelessWidget {
                 Center(
                   child: Image.network(
                     'https://images.pexels.com/photos/21972309/pexels-photo-21972309/free-photo-of-homme-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                    height: sizeW / 1.5,
+                   // height: sizeW / 1.5,
                   ),
                 ),
                 Column(
@@ -80,7 +80,7 @@ class OwnCarousel extends StatelessWidget {
                   children: [
                     ResponsiveText(
                       text:
-                          'fghasgfjahsgdfa dsahgfhsfghadgsfa fghasgfjahsgdfa dsahgfhsfghadgsfa fghasgfjahsgdfa JYKIUYdgsfhas JYKIUYdgsfhas',
+                         " Agreat photographer's tool for online casting that really works!",
                     ),
                   ],
                 ),
@@ -113,49 +113,36 @@ class ResponsiveText extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double scaleFactor =
         screenWidth / 400; // Adjust 400 to a reference screen width
- bool ismobile = screenWidth < 780;
-
+    bool ismobile = screenWidth < 780;
 
     return Padding(
       padding: const EdgeInsets.only(left: 30),
       child: FittedBox(
         fit: BoxFit.cover,
         child: Container(
-          width:
-          ismobile ?
-        screenWidth /2.2
-          : screenWidth / 2,
-          height: screenHeight / 1.3,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(
+          width: ismobile ? screenWidth / 2.2 : screenWidth / 2,
+          height: ismobile ? screenHeight /4 : screenHeight,
+          child: Text.rich(TextSpan(children: [
+            WidgetSpan(
+              child: Icon(
                 Icons.format_quote,
                 color: roseColor,
                 size: 40,
               ),
-              Expanded(
-                child: Stack(
-                  children: [
-                    Text(
-                      textAlign: TextAlign.justify,
-                      text,
-                      style: TextStyle(fontSize: 20 * scaleFactor),
-                      softWrap: true,
-                    ),
-                    Positioned(
-                      child: Icon(
-                        Icons.format_quote,
-                        color: roseColor,
-                      ),
-                      right: 100,
-                      bottom: 0,
-                    )
-                  ],
-                ),
+            ),
+            TextSpan(
+              text: text,
+              style:// textStyleTitle
+              TextStyle(fontSize:20 * scaleFactor),
+            ),
+            WidgetSpan(
+              child: Icon(
+                Icons.format_quote,
+                color: roseColor,
               ),
-            ],
-          ),
+            ),
+          ])),
+          
         ),
       ),
     );
