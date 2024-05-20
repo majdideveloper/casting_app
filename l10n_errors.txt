@@ -1,5 +1,6 @@
 {
   "fr": [
-    "language"
+    "language",
+    "title_section_success"
   ]
 }

@@ -1,6 +1,6 @@
 {
-    "language":"English",
-    "@language":{
+    "language": "English",
+    "@language": {
         "description": "The current Language"
     },
     "logIn": "Log In",
@@ -16,15 +16,38 @@
         "description": "Text for the sign out button"
     },
     "find_work_as_a_model": "Find work as a model",
-    "@signOut": {
+    "@find_work_as_a_model": {
         "description": "Text for the Find work as a model button"
     },
     "find_models_and_talents": "Find models and talents",
-    "@signOut": {
+    "@find_models_and_talents": {
         "description": "Text for the Find models and talents button"
     },
     "modeling_jobs_for_newcomers": "Modeling jobs for newcomers",
-    "@signOut": {
-        "description": "Text for the Subtitle Modeling jobs for newcomers "
-    }
+    "@modeling_jobs_for_newcomers": {
+        "description": "Text for the Subtitle Modeling jobs for newcomers"
+    },
+    "subtitile_auth_professional": "Source models, talents and influencers for all types of projects.",
+    "for_model_and_talents": "For models and Talents",
+    "@for_model_and_talents": {
+        "description": "Text for the model log in button"
+    },
+    "for_professional": "For professionals",
+    "@for_professional": {
+        "description": "Text for the professional log in button"
+    },
+    "title_section_brand": "Brands that trust us",
+    "@title_section_brand": {
+        "description": "Title for the section showcasing brands that trust the platform"
+    },
+    "title_section_community": "Community",
+    "title_section_safety": "Your Safety comes first",
+    "title_section_success": "Success Stories",
+    "title_section_discovered": "Get Discovered",
+    "community_text1": "Models in community",
+    "community_text2": "Industry Professionals",
+    "community_text3": "Agencies",
+    "safety_text1": "All professional members are verified by our team",
+    "safety_text2": "Advanced tools to stop scammers in their tracks",
+    "safety_text3": "Community reviews for added peace of mind"
 }

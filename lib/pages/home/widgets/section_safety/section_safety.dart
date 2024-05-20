@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:casting_app_web/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:casting_app_web/core/theme/theme_app.dart';
 
 class SectionSafety extends StatelessWidget {
@@ -18,15 +18,15 @@ class SectionSafety extends StatelessWidget {
           runSpacing: 25,
           children: [
             SafetyWidget(
-              text: 'All professional members are verified by our team',
+              text:  AppLocalizations.of(context).safety_text1,
               icon: Icons.security,
             ),
             SafetyWidget(
-              text: 'All professional members are verified by our team',
+              text:  AppLocalizations.of(context).safety_text2,
               icon: Icons.security,
             ),
             SafetyWidget(
-              text: 'All professional members are verified by our team',
+              text:  AppLocalizations.of(context).safety_text3,
               icon: Icons.security,
             ),
           ],

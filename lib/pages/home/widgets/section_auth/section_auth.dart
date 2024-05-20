@@ -24,15 +24,17 @@ class SectionAuthWidgets extends StatelessWidget {
               title: AppLocalizations.of(context)
                   .find_work_as_a_model, // 'Find work as a model',
               text: AppLocalizations.of(context).modeling_jobs_for_newcomers,
-              textButton: 'For models and talents',
+              textButton:  AppLocalizations.of(context).for_model_and_talents,
               onPressed: () {},
             ),
             WidgetAuth(
               image:
                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZK7VV7nV05KYAhTP4_WPIdxuUe9Ucg5tlK71kzaNQA&s',
               title: AppLocalizations.of(context).find_models_and_talents,
-              text: 'Modeling jobs for newcomers',
-              textButton: 'For professionals',
+              text: AppLocalizations.of(context).subtitile_auth_professional,
+              textButton: AppLocalizations.of(context).for_professional,
+              
+              // 'For professionals',
               onPressed: () {},
             ),
           ],
